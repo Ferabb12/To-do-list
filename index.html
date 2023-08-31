@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <center>
+      <div class="container">
+    <h1 id="h">TO-DO<span> LIST</span></h1>
+    <input type="text" placeholder="Enter Your ToDo value" id="UserInput"><br><br>
+    <button onclick="addToDo()" class="first">Add Task➕</button>
+    <button onclick="deleteFirst()" class="second">Delete First Task</button>
+    <button onclick="deleteLast()" class="first">Delete Last Task</button>
+    <button onclick="deleteAll()" class="second">Delete All Task</button>
+    <button onclick="deleteOne()" class="first">Delete One Task</button>
+    <button onclick="Edit()" class="second">Edit One Task</button>
+    <div id="display"></div>
+   </div>
+</center>
+    <script>
+             var  allProducts = []
+             function addToDo() {
+           if (UserInput.value ==""){
+                alert("Please Input Your ToDo value ")
+             }
+             else{
+                allProducts.push(UserInput.value) 
+                UserInput.value =""
+                display.innerHTML = allProducts
+                console.log(allProducts);
+          }h
+             }
+             function deleteFirst() {
+                allProducts.shift() 
+                UserInput.value =""
+                display.innerHTML = allProducts
+                console.log(allProducts);
+                
+    
+             }
+             function deleteLast() {
+          
+                allProducts.pop() 
+                UserInput.value =""
+                display.innerHTML = allProducts
+                console.log(allProducts);
+                
+             }
+             function deleteAll() {
+             var response = confirm("Are you sure you want to delete everything??")
+             if (response==true){
+                allProducts.splice(0) 
+                UserInput.value =""
+                display.innerHTML = allProducts
+                console.log(allProducts);
+             }else {
+                alert("You have successfully cancelled the delete")
+             }
+             }
+             function deleteOne() {
+             var response = prompt(" which index did you want to delete")
+             if (response){
+                allProducts.splice(response,1) 
+                display.innerHTML = allProducts
+                console.log(allProducts);
+             }
+             }
+             function Edit() {
+             var response = prompt(" which index did you want to edit?")
+             var response1 = prompt(" Edit To What?")
+             if (response){
+                allProducts.splice(response, 1, response1) 
+                display.innerHTML = allProducts
+                console.log(allProducts);
+             }
+             }
+
+    </script>
+</body>
+</html>

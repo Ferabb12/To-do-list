@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/pexels-craig-adderley-1563356.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background: linear-gradient(rgb(32, 114, 94),black,grey);
+    height: 9in; */
+}
+.container{
+   
+margin-top: 50px;
+height: 5in;
+    
+}
+h1{
+    margin-top: 30px;
+}
+span{
+    color: red;
+}
+input{
+    height: 60px;
+    width:30%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 40px;
+    border: 3px solid red;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+button{
+    height: 45px;
+    background: linear-gradient(to top, red, rgb(25, 0, 255));
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid;
+}
+button:hover{
+    background: linear-gradient(to top, black, rgb(25, 0, 255));
+cursor: pointer;
+transform: translateY(20%);
+
+}
+#display{
+    font-size: 30px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-top: 70px;
+    width: 30%;
+    height: 60%;
+
+
+}
+@media screen and (min-width: 40px){
+   #h{
+    color: white;
+   }
+   body{
+    height: 9in;
+   }
+   input{
+    width: 3in;
+    margin-top: 20px;
+   }
+   button{
+     width: 2in;
+    font-size: 18px;
+    margin: 20px 0px;
+   }
+   first{
+    margin-left: 20px;
+   }
+   second{
+    margin-right: 20px;
+   }
+   #display{
+ 
+   word-break: break-all;
+
+   
+   }
+   
+}
